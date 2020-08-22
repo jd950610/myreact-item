@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //已知有字符串foo ="get-element-by-id”, 写一个function将其转化成驼峰表示法”getElementById。
+    var foo = "get-element-by-id";
+    function change(msg) {
+        var arr = msg.split("-");//["get","element","by",'id']
+        for (var i = 1; i < arr.length; i++) {
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1, arr[i].length - 1)
+        }
+        //["get","Element","By",'Id']
+        msg = arr.join("")
+        return msg
+    }
+    console.log(change(foo))
+</script>

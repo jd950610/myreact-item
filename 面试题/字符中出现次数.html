@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //0-9:48-57//A-Z:65-90// a-z:97-122 
+    // 输入一个字符串，统计字符串中有多少个大写字母，小写字母，数字,及其他字符
+    var str = "4215gvcgcgdcv AnLJ5";
+    var count1 = 0;
+    var count2 = 0;
+    var count3 = 0;
+    var count4 = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (str.charAt(i) >= "a" && str.charAt(i) <= "z") {
+            count1++;
+        } else if (str.charAt(i) >= "A" && str.charAt(i) <= "Z") {
+            count2++;
+        } else if (str.charAt(i) >= "0" && str.charAt(i) <= "9") {
+            count3++;
+        } else {
+            count4++;
+        }
+    }
+    console.log("小写字母：" + count1, "大写字母：" + count2, "数字：" + count3, "其他：" + count4)
+</script>

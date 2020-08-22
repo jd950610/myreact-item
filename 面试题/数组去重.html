@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var arr1 = [1, 3, 3, 4, 1, 4, 5, 8, 5, 3, 8, 7, 4, 5, 8, 3, 98]
+    function unique(arr) {
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (newArr.indexOf(arr[i]) == -1) {
+                newArr.push(arr[i]);
+            }
+        }
+        return newArr;
+    }
+    console.log(unique(arr1))
+    // 2..............................
+    var arr2 = [1, 3, 4, 3, 22, 1, 45, 1, 1]
+    function norepeat(arr) {
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    arr.splice(j, 1);
+                    j--;
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(norepeat(arr2));
+</script>
